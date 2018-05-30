@@ -4,7 +4,6 @@ from sphinx.writers.latex import LaTeXTranslator
 from sphinx.util.osutil import copyfile
 
 from docutils import nodes
-import ipdb
 
 class SideBySideDirective(Directive):
     has_content = True
