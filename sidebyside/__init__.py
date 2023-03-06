@@ -48,8 +48,8 @@ class SideBySideDirective(Directive):
         return [node]
 
 class SideBySideLaTeXTranslator(LaTeXTranslator):
-   def __init__(self, document, builder):
-      LaTeXTranslator.__init__(self, document, builder)
+   def __init__(self, *args):
+      LaTeXTranslator.__init__(self, *args)
 
    def visit_container(self, node):
       if 'sidebyside-master' in node["classes"]:
