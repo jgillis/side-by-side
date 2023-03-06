@@ -66,7 +66,10 @@ class SideBySideLaTeXTranslator(LaTeXTranslator):
 CSS_FILE = 'sidebyside.css'
 
 def add_assets(app):
-    app.add_stylesheet(CSS_FILE)
+    try:
+        app.add_stylesheet(CSS_FILE) # Deprecated
+    except:
+        app.add_css_file(CSS_FILE)
 
 
 def copy_assets(app, exception):
